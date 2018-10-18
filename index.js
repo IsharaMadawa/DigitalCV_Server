@@ -9,6 +9,9 @@ require("./startup/routes")(app);
 require("./startup/validation")();
 require("./startup/prod")(app);
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3000
+const server = app.listen(port, () => {
   winston.info("Server running on port : 3000");
 });
+
+module.exports = server
