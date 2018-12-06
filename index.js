@@ -2,10 +2,11 @@ const winston = require('winston');
 const express = require("express");
 const app = express();
 
-require("./startup/logging");
+require("./startup/logging")();
+require("./startup/cors")(app);
+require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/auth")();
-require("./startup/routes")(app);
 require("./startup/validation")();
 require("./startup/prod")(app);
 
@@ -14,4 +15,4 @@ const server = app.listen(port, () => {
   winston.info("Server running on port : 3000");
 });
 
-module.exports = server
+module.exports = server;
