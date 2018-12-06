@@ -18,7 +18,7 @@ module.exports = function() {
     }),
     new winston.transports.File({ filename: "uncaughtExceptions.log" })
   );
-  winston.exitOnError = true;
+  winston.exitOnError = false;
 
   winston.configure({
     transports: [

@@ -12,7 +12,7 @@ require("./startup/prod")(app);
 
 const port = process.env.PORT || 3000
 const server = app.listen(port, () => {
-  winston.info("Server running on port : 3000");
+  winston.info("Server running on port : " + port);
 });
 
 module.exports = server;
