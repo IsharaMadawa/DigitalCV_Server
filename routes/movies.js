@@ -69,7 +69,6 @@ router.put("/:id", auth, async (req, res) => {
 });
 
 router.delete("/:id", async (req, res) => {
-  console.log(req.params.id);
   const movie = await Movie.findByIdAndDelete(req.params.id);
   if (!movie)
     return res
