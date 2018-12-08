@@ -12,6 +12,6 @@ module.exports = function(req, res, next) {
     req.user = decoded;
     next();
   } catch (ex) {
-    res.ststus(400).send(ex);
+    res.status(400).send(ex);
   }
 };
