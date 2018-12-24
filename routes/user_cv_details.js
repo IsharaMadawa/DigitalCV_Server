@@ -25,7 +25,14 @@ router.get("/getcv", async (req, res) => {
   const doc = new pdfkit();
   doc.pipe(fs.createWriteStream("CV_Ishara_Madawa.pdf"));
   // Set a title and pass the X and Y coordinates
+  
+  
+  doc.text('This is a Header', 20, doc.page.height - 50, {
+    lineBreak: true
+  });
+
   doc.fontSize(15).text(cvDetails[0].user.name, 50, 50);
+  
   // Set the paragraph width and align direction
   doc.text(
     "Wally Gator is a swinging alligator in the swamp. He's the greatest percolator when he really starts to romp. There has never been a greater operator in the swamp. See ya later, Wally Gator.",
@@ -34,6 +41,11 @@ router.get("/getcv", async (req, res) => {
       align: "left"
     }
   );
+
+  doc.text('This is a footer', 20, doc.page.height - 50, {
+    lineBreak: false
+  });
+
   doc.end();
 
   res.setHeader("Content-type", "application/pdf");
