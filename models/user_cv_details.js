@@ -1,17 +1,39 @@
 const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
 const UserCVDetailsSchema = new mongoose.Schema({
   user: {
     type: new mongoose.Schema({
       name: {
         type: String,
         required: true
-      }
+      },
+      blog: {
+        type: String
+      },
+      email: {
+        type: String
+      },
+      address: {
+        type: String
+      },
+      Mobile: [String],
+      social: [
+        {
+          type: new mongoose.Schema({
+            site: {
+              type: String
+            },
+            url: {
+              type: String
+            }
+          })
+        }
+      ]
     }),
     required: true
   },
   currentCompany: String,
+  currentPosition: String,
   skills: [String],
   defaultProfile: {
     type: Boolean,
@@ -36,10 +58,11 @@ const UserCVDetailsSchema = new mongoose.Schema({
           type: String,
           required: true
         },
-        specialPoints: [String],
         details: {
           type: String
-        }
+        },
+        responsibilities: [String],
+        duration: String
       })
     }
   ],
@@ -63,13 +86,14 @@ const UserCVDetailsSchema = new mongoose.Schema({
           required: true
         },
         title: {
-          type: String,
-          required: true
+          type: String
         },
+        company: String,
         details: {
           type: String,
           required: true
-        }
+        },
+        MostReasonHighlights: Boolean
       })
     }
   ],
