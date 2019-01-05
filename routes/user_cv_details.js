@@ -62,7 +62,7 @@ router.post("/", async (req, res) => {
       name: "Ishara Madawa Kumararathna",
       mobile: ["+94712197222"],
       email: "dev.madawa@gmail.com",
-      address: "No 21, Supreme City, Karundupona, Kegalle",
+      address: "No 21, Supreme City, Karundupona, Kegalla",
       blog: "http://codestreetblog.blogspot.com/",
       social: [
         {
@@ -75,47 +75,57 @@ router.post("/", async (req, res) => {
         }
       ]
     },
-    currentCompany: "Data Managment Systems(PVT) Ltd",
+    svn: [
+      {
+        site: "GitHub",
+        url: "https://github.com/IsharaMadawa"
+      },
+      {
+        site: "BitBucket",
+        url: "https://bitbucket.org/MadXish/"
+      }
+    ],
+    currentCompany: "Data Management Systems (PVT) Ltd",
     currentPosition: "Software Engineer",
     experience: [
       {
         organizationShortName: "DMS",
-        organization: "Data Management Systems(PVT) Ltd.",
+        organization: "Data Management Systems (PVT) Ltd.",
         country: "Sri Lanka",
         position: "Software Engineer",
         details: "",
         duration: "2016 July - Currently",
         responsibilities: [
-          "Responsible in Integrated Security System in Sri Lanka Port Authority entire system design and develop Web API, RFID Module, Workflows, SDK and Active Directory, Depolyments,Integrations.",
+          "Responsible in Integrated Security System in Sri Lanka Port Authority entire system design and develop Web API, RFID Module, Workflows, SDK and Active Directory, Deployments,Integrations.",
           "Develop and maintain responsibility in Inventory and Purchasing process in ERP System (In-House development project).",
           "Responsible in all research and development process in .Net base technologies and SDKs and Integration, Maintain.",
-          "Responsible in Integration, developing in all Active directory, SQL server, ELK Stack, Sonarqube, Jenkins.",
+          "Responsible in Integration, developing in all Active directory, SQL server, ELK Stack, SonarQube, Jenkins.",
           "Responsible in leading small group towards project goals.",
           "Modify and Support all .Net Base Systems at DMS (PVT) Ltd."
         ]
       },
       {
         organizationShortName: "ZHO",
-        organization: "Zayad Higher Organization",
-        country: "Abu Dabhi, United Arab Emirates",
+        organization: "Zayed Higher Organization",
+        country: "Abu Dhabi, United Arab Emirates",
         position: "Software Engineer - Web",
-        details: "Contarct Base",
+        details: "Contract Base",
         duration: "2018 April - 2019 April",
         responsibilities: [
           ,
           "Responsible in develop, testing, integration and maintain all new systems in Zayad Higher Organization",
-          "Managing, Communicating with Outsources projects companies and maintaine application release process."
+          "Managing, Communicating with Outsources projects companies and maintain application release process."
         ]
       }
     ],
     skillSet: [
       {
         title: "UI",
-        skills: ["ReactJS", "Javascript", "(ES6)", "Jquery", "HTML", "CSS"]
+        skills: ["ReactJS", "JavaScript", "(ES6+)", "jQuery", "HTML", "CSS"]
       },
       {
         title: "Backend",
-        skills: ["C#", "NodeJS", "C++(QT)"]
+        skills: ["C#", "NodeJS", "C++ (QT)"]
       },
       {
         title: "Frameworks",
@@ -147,7 +157,7 @@ router.post("/", async (req, res) => {
       },
       {
         title: "Tools",
-        skills: ["IDWorks", "BizTalk(RFID)"]
+        skills: ["IDWorks"]
       },
       {
         title: "Collaboration",
@@ -156,12 +166,41 @@ router.post("/", async (req, res) => {
     ],
     projects: [
       {
+        name: "My Digital CV",
+        title: "Digital CV - Ishara Madawa",
+        company: "",
+        details:
+          "This is one of my live hosted projects that I have created for learning purpose and also fun. Web Application Using ReactJS and NodeJS backend with mongo DB. Hosted in Heroku free tier and MLab for mongo db hosting. this site including create cv automatically based on db data and updating  data via admin dashboard",
+        link: "http://isharamadawa.herokuapp.com",
+        github: [
+          "https://github.com/IsharaMadawa/DigitalCV_Server",
+          "https://github.com/IsharaMadawa/DigitalCV_Web"
+        ],
+        MostReasonHighlights: true,
+        myProjects: true
+      },
+      {
+        name: "MadXAudio",
+        title: "Group Audio Conference App",
+        company: "",
+        details:
+          "This is another one of my live hosted project that i have created for learning purpose and also fun. Web Application is JavaScript  application hosted as PHP app in Heroku and NodeJS backend with WebRTC libraries (RTCMulticonnection). Hosted in Heroku free tier. I created this application when i was in Abu Dhabi (UAE) for my personal use. This application is using socket.io server as a signaling server and WebRTC libraries fir capturing audio and video streams from client application. I have study and learned lots of thigs my self about RTC technologies.",
+        link: "https://madxaudio.herokuapp.com",
+        github: [
+          "https://github.com/IsharaMadawa/madxaudio-web",
+          "https://github.com/IsharaMadawa/madxaudio-api"
+        ],
+        MostReasonHighlights: true,
+        myProjects: true
+      },
+      {
         name: "Wajthna",
         title: "System for track progress students individually in ZHO",
         company: "DMS",
         details:
-          "Track progress of students that have disabilities in Zayad Higher Organization. Create and maintain sevaral plans between students, parents and teachers and managment",
-        MostReasonHighlights: true
+          "Track progress of students that have disabilities in Zayed Higher Organization. Create and several sevaral plans between students, parents and teachers and management. Wjathna is collection of separate systems under one domain.",
+        MostReasonHighlights: true,
+        myProjects: false
       },
       {
         name: "Integrated Security System - Sri Lanka Port Authority",
@@ -169,7 +208,8 @@ router.post("/", async (req, res) => {
         company: "DMS",
         details:
           "Security System for issuing passes for internal and external users.",
-        MostReasonHighlights: false
+        MostReasonHighlights: false,
+        myProjects: false
       },
       {
         name:
@@ -179,7 +219,8 @@ router.post("/", async (req, res) => {
         details:
           "Security System for issuing passes for internal and external users, Vehicles including RFID base tags etc.",
         responsibility: "Develop, Maintain and deploy RFID project.",
-        MostReasonHighlights: false
+        MostReasonHighlights: false,
+        myProjects: false
       },
       {
         name: "Middleware for Mires Global",
@@ -188,7 +229,8 @@ router.post("/", async (req, res) => {
         details:
           "This middle layer web service act as an intermediary interface between Airline Reservation and car Rental Companies",
         responsibility: "",
-        MostReasonHighlights: false
+        MostReasonHighlights: false,
+        myProjects: false
       },
       {
         name: "ERP System – In House Development",
@@ -197,7 +239,8 @@ router.post("/", async (req, res) => {
         details:
           "This middle layer web service act as an intermediary interface between Airline Reservation and car Rental Companies",
         responsibility: "",
-        MostReasonHighlights: false
+        MostReasonHighlights: false,
+        myProjects: false
       }
     ],
     referees: [
@@ -205,7 +248,7 @@ router.post("/", async (req, res) => {
         title: "Mr.",
         name: "Ziad Hawamdeh",
         position: "Senior Principal Analyst",
-        organization: "Zayad Higher Organization",
+        organization: "Zayed Higher Organization",
         email: "ziad.hawamdeh@zho.ae",
         mobileNo: ["00971565554042"],
         address: "United Arab Emirates"

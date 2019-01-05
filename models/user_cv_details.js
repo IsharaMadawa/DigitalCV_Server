@@ -34,6 +34,18 @@ const UserCVDetailsSchema = new mongoose.Schema({
   },
   currentCompany: String,
   currentPosition: String,
+  svn: [
+    {
+      type: new mongoose.Schema({
+        site: {
+          type: String
+        },
+        url: {
+          type: String
+        }
+      })
+    }
+  ],
   skills: [String],
   defaultProfile: {
     type: Boolean,
@@ -93,6 +105,8 @@ const UserCVDetailsSchema = new mongoose.Schema({
           type: String,
           required: true
         },
+        url:String,
+        github:[String],
         MostReasonHighlights: Boolean
       })
     }
