@@ -118,6 +118,11 @@ router.post("/", async (req, res) => {
         ]
       }
     ],
+    education:[],
+    interest :[
+  "I follow a number of sci-fi and fantasy, Animation genre movies and television shows, music, even cooking :D. and I spend a large amount of my free time exploring the latest technology in the web and mobile development world. And testing things for fun.",
+  "Apart from being a developing stuff, I enjoy my time being outdoors. Riding bike, Traveling, etc."
+  ],
     skillSet: [
       {
         title: "UI",

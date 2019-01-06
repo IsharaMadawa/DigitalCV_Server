@@ -78,6 +78,30 @@ const UserCVDetailsSchema = new mongoose.Schema({
       })
     }
   ],
+  education: [
+    {
+      type: new mongoose.Schema({
+        institute: {
+          type: String,
+          required: true
+        },
+        title: {
+          type: String,
+          required: true
+        },
+        details: {
+          type: String
+        },
+        marks: {
+          type: String
+        },
+        duration: {
+          type: String
+        }
+      })
+    }
+  ],
+  interest: [String],
   skillSet: [
     {
       type: new mongoose.Schema({
@@ -105,8 +129,8 @@ const UserCVDetailsSchema = new mongoose.Schema({
           type: String,
           required: true
         },
-        url:String,
-        github:[String],
+        url: String,
+        github: [String],
         MostReasonHighlights: Boolean
       })
     }
