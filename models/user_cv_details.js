@@ -101,6 +101,8 @@ const UserCVDetailsSchema = new mongoose.Schema({
       })
     }
   ],
+  certifications: [String],
+  awards: [String],
   interest: [String],
   skillSet: [
     {

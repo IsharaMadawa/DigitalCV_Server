@@ -56,6 +56,7 @@ router.get("/getcv", async (req, res) => {
   doc.pipe(res);
 });
 
+//Seed API
 router.post("/", async (req, res) => {
   let cvDetails = new UserCVDetails({
     user: {
@@ -113,16 +114,34 @@ router.post("/", async (req, res) => {
         duration: "2018 April - 2019 April",
         responsibilities: [
           ,
-          "Responsible in develop, testing, integration and maintain all new systems in Zayad Higher Organization",
+          "Responsible in develop, testing, integration and maintain Wjthna system in Zayad Higher Organization",
           "Managing, Communicating with Outsources projects companies and maintain application release process."
         ]
       }
     ],
-    education:[],
-    interest :[
-  "I follow a number of sci-fi and fantasy, Animation genre movies and television shows, music, even cooking :D. and I spend a large amount of my free time exploring the latest technology in the web and mobile development world. And testing things for fun.",
-  "Apart from being a developing stuff, I enjoy my time being outdoors. Riding bike, Traveling, etc."
-  ],
+    education: [
+      {
+        institute:
+          "National School of Business Management affiliated with Plymouth University",
+        title: "BSc(Hons) in Software Engineering",
+        details: "",
+        marks: "Second class upper division",
+        duration: "2013 April - 2016 June"
+      },
+      {
+        institute: "Data Information Bureau",
+        title: "Higher Diploma in Software Engineering",
+        details: "",
+        marks: "",
+        duration: "2009"
+      }
+    ],
+    certifications: [],
+    awards: [],
+    interest: [
+      "I follow a number of sci-fi and fantasy, Animation genre movies and television shows, music, even cooking :D. and I spend a large amount of my free time exploring the latest technology in the web and mobile development world. And testing things for fun.",
+      "Apart from being a developing stuff, I enjoy my time being outdoors. Riding bike, Traveling, etc."
+    ],
     skillSet: [
       {
         title: "UI",
