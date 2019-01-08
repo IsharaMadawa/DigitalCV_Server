@@ -16,7 +16,10 @@ const UserCVDetailsSchema = new mongoose.Schema({
       address: {
         type: String
       },
-      Mobile: [String],
+      mobile: [String],
+      myself: {
+        thpe: String
+      },
       social: [
         {
           type: new mongoose.Schema({

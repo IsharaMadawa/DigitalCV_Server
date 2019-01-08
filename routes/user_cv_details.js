@@ -65,6 +65,8 @@ router.post("/", async (req, res) => {
       email: "dev.madawa@gmail.com",
       address: "No 21, Supreme City, Karundupona, Kegalla",
       blog: "http://codestreetblog.blogspot.com/",
+      myself:
+        "I am an enthusiastic Software Engineer that have exprience in software developmnt in Sri Lanka as well as Abu Dhabi(UAE) and have 3+ years’ experience. I'm mainly focused on architecting, design and development web platforms.",
       social: [
         {
           site: "LinkedIn",
@@ -140,7 +142,8 @@ router.post("/", async (req, res) => {
     awards: [],
     interest: [
       "I follow a number of sci-fi and fantasy, Animation genre movies and television shows, music, even cooking :D. and I spend a large amount of my free time exploring the latest technology in the web and mobile development world. And testing things for fun.",
-      "Apart from being a developing stuff, I enjoy my time being outdoors. Riding bike, Traveling, etc."
+      "Apart from being a developing stuff, I enjoy my time being outdoors. Riding bike, Traveling, etc.",
+      "Most recently I’m studding on WebRTC, NodeJS, ReactJS and JavaScript and bit off mobile application development using react native."
     ],
     skillSet: [
       {
