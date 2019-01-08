@@ -18,7 +18,7 @@ const UserCVDetailsSchema = new mongoose.Schema({
       },
       mobile: [String],
       myself: {
-        thpe: String
+        type: String
       },
       social: [
         {
