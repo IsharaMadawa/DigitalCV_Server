@@ -64,28 +64,57 @@ router.post("/", async (req, res) => {
       mobile: ["+94712197222"],
       email: "dev.madawa@gmail.com",
       address: "No 21, Supreme City, Karundupona, Kegalla",
-      blog: "http://codestreetblog.blogspot.com/",
+      blogging: [
+        {
+          site: "Codestreetblog",
+          url: "http://codestreetblog.blogspot.com/",
+          iconPath: "./../../utils/icon/Blogger.png"
+        }
+      ],
+      profileImage: [
+        {
+          imageFrom: "localhost",
+          path: "./../utils/img/profile.png",
+          isActive: false,
+          isLocal:true
+        },
+        {
+          imageFrom: "facebook",
+          path: "https://graph.facebook.com/100000510573524/picture?type=large",
+          isActive: true,
+          isLocal:false,
+        }
+      ],
       myself:
         "I am an enthusiastic Software Engineer that have exprience in software developmnt in Sri Lanka as well as Abu Dhabi(UAE) and have 3+ years’ experience. I'm mainly focused on architecting, design and development web platforms.",
       social: [
         {
           site: "LinkedIn",
-          url: "https://www.linkedin.com/in/ishara-madawa-0608558a/"
+          url: "https://www.linkedin.com/in/ishara-madawa-0608558a/",
+          iconPath: "./../../utils/icon/linkedin-icon.png"
         },
         {
           site: "Facebook",
-          url: "https://www.facebook.com/ishara.madawa"
+          url: "https://www.facebook.com/ishara.madawa",
+          iconPath: "./../../utils/icon/facebook-icon.png"
+        },
+        {
+          site: "@isharamadawa",
+          url: "https://twitter.com/isharamadawa",
+          iconPath: "./../../utils/icon/twitter-icon.png"
         }
       ]
     },
     svn: [
       {
         site: "GitHub",
-        url: "https://github.com/IsharaMadawa"
+        url: "https://github.com/IsharaMadawa",
+        iconPath: "./../../utils/icon/github-icon.png"
       },
       {
         site: "BitBucket",
-        url: "https://bitbucket.org/MadXish/"
+        url: "https://bitbucket.org/MadXish/",
+        iconPath: "./../../utils/icon/bitbucket-icon.png"
       }
     ],
     currentCompany: "Data Management Systems (PVT) Ltd",
@@ -115,7 +144,6 @@ router.post("/", async (req, res) => {
         details: "Contract Base",
         duration: "2018 April - 2019 April",
         responsibilities: [
-          ,
           "Responsible in develop, testing, integration and maintain Wjthna system in Zayad Higher Organization",
           "Managing, Communicating with Outsources projects companies and maintain application release process."
         ]

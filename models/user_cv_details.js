@@ -7,9 +7,21 @@ const UserCVDetailsSchema = new mongoose.Schema({
         type: String,
         required: true
       },
-      blog: {
-        type: String
-      },
+      blogging: [
+        {
+          type: new mongoose.Schema({
+            site: {
+              type: String
+            },
+            url: {
+              type: String
+            },
+            iconPath: {
+              type: String
+            }
+          })
+        }
+      ],
       email: {
         type: String
       },
@@ -20,6 +32,24 @@ const UserCVDetailsSchema = new mongoose.Schema({
       myself: {
         type: String
       },
+      profileImage: [
+        {
+          type: new mongoose.Schema({
+            imageFrom: {
+              type: String
+            },
+            path: {
+              type: String
+            },
+            isActive: {
+              type: Boolean
+            },
+            isLocal: {
+              type: Boolean
+            }
+          })
+        }
+      ],
       social: [
         {
           type: new mongoose.Schema({
@@ -27,6 +57,9 @@ const UserCVDetailsSchema = new mongoose.Schema({
               type: String
             },
             url: {
+              type: String
+            },
+            iconPath: {
               type: String
             }
           })
@@ -44,6 +77,9 @@ const UserCVDetailsSchema = new mongoose.Schema({
           type: String
         },
         url: {
+          type: String
+        },
+        iconPath: {
           type: String
         }
       })
