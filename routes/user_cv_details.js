@@ -25,7 +25,7 @@ router.get("/getcv", async (req, res) => {
   const doc = new pdfkit();
   doc.pipe(fs.createWriteStream("CV_Ishara_Madawa.pdf"));
 
-  doc.text(userCVDetails.user.name, 20, 50, {
+  doc.fontSize(25).text(userCVDetails.user.name, 20, 20, {
     lineBreak: true
   });
   
