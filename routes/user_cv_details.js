@@ -15,32 +15,20 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/getcv", async (req, res) => {
-  //Get Default Profile Details
   let cvDetails = await UserCVDetails.find({ defaultProfile: true });
 
   if (cvDetails.length === 0) {
     return res.status(404).send("Cannot find default CV Details");
   }
+  const userCVDetails = cvDetails[0];
 
   const doc = new pdfkit();
   doc.pipe(fs.createWriteStream("CV_Ishara_Madawa.pdf"));
-  // Set a title and pass the X and Y coordinates
 
-  doc.text("This is a Header", 20, doc.page.height - 50, {
+  doc.text(userCVDetails.user.name, 20, 50, {
     lineBreak: true
   });
-
-  doc.fontSize(15).text(cvDetails[0].user.name, 50, 50);
-
-  // Set the paragraph width and align direction
-  doc.text(
-    "Wally Gator is a swinging alligator in the swamp. He's the greatest percolator when he really starts to romp. There has never been a greater operator in the swamp. See ya later, Wally Gator.",
-    {
-      width: 410,
-      align: "left"
-    }
-  );
-
+  
   doc.text("This is a footer", 20, doc.page.height - 50, {
     lineBreak: false
   });
@@ -76,13 +64,13 @@ router.post("/", async (req, res) => {
           imageFrom: "localhost",
           path: "./../utils/img/profile.png",
           isActive: false,
-          isLocal:true
+          isLocal: true
         },
         {
           imageFrom: "facebook",
           path: "https://graph.facebook.com/100000510573524/picture?type=large",
           isActive: true,
-          isLocal:false,
+          isLocal: false
         }
       ],
       myself:
