@@ -10,7 +10,6 @@ router.get("/", async (req, res) => {
   if (cvDetails.length === 0) {
     return res.status(404).send("Cannot find default CV Details");
   }
-
   res.send(cvDetails);
 });
 
@@ -25,10 +24,41 @@ router.get("/getcv", async (req, res) => {
   const doc = new pdfkit();
   doc.pipe(fs.createWriteStream("CV_Ishara_Madawa.pdf"));
 
-  doc.fontSize(25).text(userCVDetails.user.name, 20, 20, {
+  doc.fontSize(30).text(userCVDetails.user.name, 30, 30, {
     lineBreak: true
   });
-  
+
+  doc
+    .fontSize(13)
+    .font("Helvetica-Bold")
+    .text("Mobile : ", 30, 60);
+
+  doc
+    .fontSize(13)
+    .font("Helvetica-Bold")
+    .text("Address : ", 30, 75);
+
+  doc
+    .fontSize(13)
+    .font("Helvetica-Bold")
+    .text("E-Mail : ", 30, 90);
+
+  doc
+    .moveTo(30, 105)
+    .lineTo(580, 105)
+    .stroke();
+
+  doc.text('About Me', 30, 115)
+     .font('Times-Roman', 13)
+     .text(userCVDetails.user.myself, {
+      //  width: 412,
+       align: 'justify',
+       indent: 30,
+       columns: 1,
+       //height: 300,
+       ellipsis: true
+     });
+
   doc.text("This is a footer", 20, doc.page.height - 50, {
     lineBreak: false
   });
