@@ -74,7 +74,7 @@ router.get("/getcv", async (req, res) => {
   doc.pipe(res);
 });
 
-//Seed API
+//CV Details Seed API
 router.post("/", async (req, res) => {
   let cvDetails = new UserCVDetails({
     user: {
