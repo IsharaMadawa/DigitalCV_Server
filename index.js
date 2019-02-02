@@ -5,7 +5,7 @@ const app = express();
 //To Allow uploading files
 app.use(express.json({limit:'20mb'}));
 
-//require("./startup/logging")();
+require("./startup/logging")();
 require("./startup/cors")(app);
 require("./startup/routes")(app);
 require("./startup/db")();
