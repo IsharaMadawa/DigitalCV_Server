@@ -1,17 +1,90 @@
 const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema;
 const UserCVDetailsSchema = new mongoose.Schema({
   user: {
     type: new mongoose.Schema({
       name: {
         type: String,
         required: true
-      }
+      },
+      blogging: [
+        {
+          type: new mongoose.Schema({
+            site: {
+              type: String
+            },
+            url: {
+              type: String
+            },
+            iconPath: {
+              type: String
+            }
+          })
+        }
+      ],
+      email: {
+        type: String
+      },
+      address: {
+        type: String
+      },
+      mobile: [String],
+      myself: {
+        type: String
+      },
+      profileImage: [
+        {
+          type: new mongoose.Schema({
+            imageFrom: {
+              type: String
+            },
+            path: {
+              type: String
+            },
+            isActive: {
+              type: Boolean
+            },
+            isLocal: {
+              type: Boolean
+            }
+          })
+        }
+      ],
+      social: [
+        {
+          type: new mongoose.Schema({
+            site: {
+              type: String
+            },
+            url: {
+              type: String
+            },
+            iconPath: {
+              type: String
+            }
+          })
+        }
+      ]
     }),
     required: true
   },
   currentCompany: String,
+  currentPosition: String,
+  svn: [
+    {
+      type: new mongoose.Schema({
+        site: {
+          type: String
+        },
+        url: {
+          type: String
+        },
+        iconPath: {
+          type: String
+        }
+      })
+    }
+  ],
   skills: [String],
   defaultProfile: {
     type: Boolean,
@@ -36,13 +109,40 @@ const UserCVDetailsSchema = new mongoose.Schema({
           type: String,
           required: true
         },
-        specialPoints: [String],
         details: {
+          type: String
+        },
+        responsibilities: [String],
+        duration: String
+      })
+    }
+  ],
+  education: [
+    {
+      type: new mongoose.Schema({
+        institute: {
+          type: String,
+          required: true
+        },
+        title: {
+          type: String,
+          required: true
+        },
+        details: {
+          type: String
+        },
+        marks: {
+          type: String
+        },
+        duration: {
           type: String
         }
       })
     }
   ],
+  certifications: [String],
+  awards: [String],
+  interest: [String],
   skillSet: [
     {
       type: new mongoose.Schema({
@@ -63,13 +163,16 @@ const UserCVDetailsSchema = new mongoose.Schema({
           required: true
         },
         title: {
-          type: String,
-          required: true
+          type: String
         },
+        company: String,
         details: {
           type: String,
           required: true
-        }
+        },
+        url: String,
+        github: [String],
+        MostReasonHighlights: Boolean
       })
     }
   ],
