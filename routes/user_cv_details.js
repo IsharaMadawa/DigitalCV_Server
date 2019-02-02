@@ -48,16 +48,17 @@ router.get("/getcv", async (req, res) => {
     .lineTo(580, 105)
     .stroke();
 
-  doc.text('About Me', 30, 115)
-     .font('Times-Roman', 13)
-     .text(userCVDetails.user.myself, {
+  doc
+    .text("About Me", 30, 115)
+    .font("Times-Roman", 13)
+    .text(userCVDetails.user.myself, {
       //  width: 412,
-       align: 'justify',
-       indent: 30,
-       columns: 1,
-       //height: 300,
-       ellipsis: true
-     });
+      align: "justify",
+      indent: 30,
+      columns: 1,
+      //height: 300,
+      ellipsis: true
+    });
 
   doc.text("This is a footer", 20, doc.page.height - 50, {
     lineBreak: false
@@ -104,7 +105,7 @@ router.post("/", async (req, res) => {
         }
       ],
       myself:
-        "I am an enthusiastic Software Engineer that have exprience in software developmnt in Sri Lanka as well as Abu Dhabi(UAE) and have 3+ years’ experience. I'm mainly focused on architecting, design and development web platforms.",
+        "I am an enthusiastic Software Engineer that have experience in software development in Sri Lanka as well as Abu Dhabi(UAE) and have 3+ years’ experience. I'm mainly focused on architecture, design and development web platforms.",
       social: [
         {
           site: "LinkedIn",
@@ -162,7 +163,7 @@ router.post("/", async (req, res) => {
         details: "Contract Base",
         duration: "2018 April - 2019 April",
         responsibilities: [
-          "Responsible in develop, testing, integration and maintain Wjthna system in Zayad Higher Organization",
+          "Responsible in develop, testing, integration and maintain Wjhtna system in Zayad Higher Organization",
           "Managing, Communicating with Outsources projects companies and maintain application release process."
         ]
       }
@@ -173,7 +174,7 @@ router.post("/", async (req, res) => {
           "National School of Business Management affiliated with Plymouth University",
         title: "BSc(Hons) in Software Engineering",
         details: "",
-        marks: "Second class upper division",
+        marks: "Second Class Upper division",
         duration: "2013 April - 2016 June"
       },
       {
@@ -181,7 +182,7 @@ router.post("/", async (req, res) => {
         title: "Higher Diploma in Software Engineering",
         details: "",
         marks: "",
-        duration: "2009"
+        duration: "2009 January - 2009 September"
       }
     ],
     certifications: [],
@@ -189,7 +190,7 @@ router.post("/", async (req, res) => {
     interest: [
       "I follow a number of sci-fi and fantasy, Animation genre movies and television shows, music, even cooking :D. and I spend a large amount of my free time exploring the latest technology in the web and mobile development world. And testing things for fun.",
       "Apart from being a developing stuff, I enjoy my time being outdoors. Riding bike, Traveling, etc.",
-      "Most recently I’m studding on WebRTC, NodeJS, ReactJS and JavaScript and bit off mobile application development using react native."
+      "Most recently I’m studding on WebRTC, NodeJS, ReactJS and JavaScript and bit off mobile application development using react native. And i have interest in fields link WebAssembly."
     ],
     skillSet: [
       {
@@ -241,9 +242,9 @@ router.post("/", async (req, res) => {
       {
         name: "My Digital CV",
         title: "Digital CV - Ishara Madawa",
-        company: "",
+        company: "hobby",
         details:
-          "This is one of my live hosted projects that I have created for learning purpose and also fun. Web Application Using ReactJS and NodeJS backend with mongo DB. Hosted in Heroku free tier and MLab for mongo db hosting. this site including create cv automatically based on db data and updating  data via admin dashboard",
+          "This is one of my live hosted projects that I have created for learning purpose and also fun. Written Using ReactJS and NodeJS backend with mongo DB. Hosted in Heroku free tier and MLab for mongo db hosting.",
         link: "http://isharamadawa.herokuapp.com",
         github: [
           "https://github.com/IsharaMadawa/DigitalCV_Server",
@@ -255,9 +256,9 @@ router.post("/", async (req, res) => {
       {
         name: "MadXAudio",
         title: "Group Audio Conference App",
-        company: "",
+        company: "hobby",
         details:
-          "This is another one of my live hosted project that i have created for learning purpose and also fun. Web Application is JavaScript  application hosted as PHP app in Heroku and NodeJS backend with WebRTC libraries (RTCMulticonnection). Hosted in Heroku free tier. I created this application when i was in Abu Dhabi (UAE) for my personal use. This application is using socket.io server as a signaling server and WebRTC libraries fir capturing audio and video streams from client application. I have study and learned lots of thigs my self about RTC technologies.",
+          "This is another one of my live hosted project that i have created for learning purpose and also fun. Web Application is JavaScript  application hosted as PHP app in Heroku and NodeJS backend with WebRTC libraries (RTCMulticonnection). Hosted in Heroku free tier. I created this application when i was in Abu Dhabi (UAE) for my personal use. This application is using socket.io server as a signaling server and WebRTC libraries fir capturing audio and video streams from client application. I have study and learned lots of things my self about RTC technologies.",
         link: "https://madxaudio.herokuapp.com",
         github: [
           "https://github.com/IsharaMadawa/madxaudio-web",
@@ -267,11 +268,12 @@ router.post("/", async (req, res) => {
         myProjects: true
       },
       {
-        name: "Wajthna",
-        title: "System for track progress students individually in ZHO",
-        company: "DMS",
+        name: "Wjhtna",
+        title:
+          "Compleate System for track progress students individually in ZHO",
+        company: "ZHO",
         details:
-          "Track progress of students that have disabilities in Zayed Higher Organization. Create and several sevaral plans between students, parents and teachers and management. Wjathna is collection of separate systems under one domain.",
+          "Track progress of students that have disabilities in Zayed Higher Organization. Create several plans between students, parents and teachers and management. Wjhtna is collection of separate systems under one domain.",
         MostReasonHighlights: true,
         myProjects: false
       },
