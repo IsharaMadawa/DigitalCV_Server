@@ -190,7 +190,7 @@ router.post("/", async (req, res) => {
     interest: [
       "I follow a number of sci-fi and fantasy, Animation genre movies and television shows, music, even cooking :D. and I spend a large amount of my free time exploring the latest technology in the web and mobile development world. And testing things for fun.",
       "Apart from being a developing stuff, I enjoy my time being outdoors. Riding bike, Traveling, etc.",
-      "Most recently I’m studding on WebRTC, NodeJS, ReactJS and JavaScript and bit off mobile application development using react native. And i have interest in fields link WebAssembly."
+      "Most recently I’m following on WebRTC, NodeJS, React, Cloud platforms like heroku, AWS and mobile application development using react native and Flutter. And i have interest in fields like WebAssembly."
     ],
     skillSet: [
       {
@@ -242,7 +242,7 @@ router.post("/", async (req, res) => {
       {
         name: "My Digital CV",
         title: "Digital CV - Ishara Madawa",
-        company: "hobby",
+        company: "Hobby",
         details:
           "This is one of my live hosted projects that I have created for learning purpose and also fun. Written Using ReactJS and NodeJS backend with mongo DB. Hosted in Heroku free tier and MLab for mongo db hosting.",
         link: "http://isharamadawa.herokuapp.com",
@@ -256,7 +256,7 @@ router.post("/", async (req, res) => {
       {
         name: "MadXAudio",
         title: "Group Audio Conference App",
-        company: "hobby",
+        company: "Hobby",
         details:
           "This is another one of my live hosted project that i have created for learning purpose and also fun. Web Application is JavaScript  application hosted as PHP app in Heroku and NodeJS backend with WebRTC libraries (RTCMulticonnection). Hosted in Heroku free tier. I created this application when i was in Abu Dhabi (UAE) for my personal use. This application is using socket.io server as a signaling server and WebRTC libraries fir capturing audio and video streams from client application. I have study and learned lots of things my self about RTC technologies.",
         link: "https://madxaudio.herokuapp.com",
