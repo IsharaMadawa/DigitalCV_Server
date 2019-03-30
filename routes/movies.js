@@ -44,7 +44,8 @@ router.put("/:id", auth, async (req, res) => {
   const genre = await Genre.findById(req.body.genreId);
   if (!genre) return res.status(400).send("Invalid Genre");
 
-  var movie = await Movie.findByIdAndUpdate(
+  //findByIdAndUpdate
+  var movie = await Movie.findOneAndUpdate( 
     req.params.id,
     {
       title: req.body.title,

@@ -23,14 +23,17 @@ const UserCVDetailsSchema = new mongoose.Schema({
         }
       ],
       email: {
-        type: String
+        type: String,
+        required: true
       },
       address: {
-        type: String
+        type: String,
+        required: true
       },
       mobile: [String],
       myself: {
-        type: String
+        type: String,
+        required: true
       },
       profileImage: [
         {
@@ -88,7 +91,7 @@ const UserCVDetailsSchema = new mongoose.Schema({
   skills: [String],
   defaultProfile: {
     type: Boolean,
-    default: true
+    default: false
   },
   experience: [
     {
@@ -151,8 +154,7 @@ const UserCVDetailsSchema = new mongoose.Schema({
           required: true
         },
         skills: [String]
-      }),
-      required: true
+      })
     }
   ],
   projects: [
@@ -199,8 +201,7 @@ const UserCVDetailsSchema = new mongoose.Schema({
           type: String,
           required: true,
           minlength: 5,
-          maxlength: 255,
-          unique: true
+          maxlength: 255
         },
         mobileNo: [String],
         address: {
@@ -208,7 +209,14 @@ const UserCVDetailsSchema = new mongoose.Schema({
         }
       })
     }
-  ]
+  ],
+  createdDate: {
+    type: Date,
+    default: new Date()
+  },
+  lastUpdatedDate: {
+    type: Date,
+  },
 });
 
 const UserCVDetails = mongoose.model("UserCVDetails", UserCVDetailsSchema);
