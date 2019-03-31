@@ -53,7 +53,7 @@ router.post("/", async (req, res) => {
       mobile: ["+94712197222"],
       email: "dev.madawa@gmail.com",
       address: "No 21, Supreme City, Karundupona, Kegalla",
-      myself: "Learning New"
+      myself: "Learning New",
     }
   });
   await cvDetails.save();

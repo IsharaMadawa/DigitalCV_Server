@@ -45,10 +45,12 @@ const UserCVDetailsSchema = new mongoose.Schema({
               type: String
             },
             isActive: {
-              type: Boolean
+              type: Boolean,
+              default: false
             },
             isLocal: {
-              type: Boolean
+              type: Boolean,
+              default: false
             }
           })
         }
