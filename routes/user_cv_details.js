@@ -49,11 +49,11 @@ router.get("/userprofiles", async (req, res) => {
 router.post("/", async (req, res) => {
   let cvDetails = new UserCVDetails({
     user: {
-      name: "Ishara Madawa Kumararathna",
-      mobile: ["+94712197222"],
-      email: "dev.madawa@gmail.com",
-      address: "No 21, Supreme City, Karundupona, Kegalla",
-      myself: "Learning New",
+      name: req.body.fullName,
+      mobile: req.body.mobile,
+      email: req.body.email,
+      address: req.body.address,
+      myself: req.body.mySelf
     }
   });
   await cvDetails.save();
